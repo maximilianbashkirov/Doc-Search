@@ -71,17 +71,7 @@ search-service/
 docker exec -it search_api pytest tests/
 ```
 
-В наборе есть регрессионные тесты на русскую морфологию (`test_search_russian_morphology`) и на латинские омоглифы в словах (`test_search_latin_homoglyphs`) — оба падали бы на старой конфигурации индекса.
-
-## Ручная проверка качества поиска
-```bash
-# было 0 документов, стало ~33
-curl "http://localhost:8000/search?query=%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%BE%D0%B2"
-# имена с латинскими омоглифами
-curl "http://localhost:8000/search?query=%D0%BF%D0%BB%D0%BE%D0%B2%D1%86%D0%BE%D0%B2"
-# словоформы
-curl "http://localhost:8000/search?query=%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B"
-```
+В наборе есть регрессионные тесты на русскую морфологию (`test_search_russian_morphology`) и на латинские омоглифы в словах (`test_search_latin_homoglyphs`)
 
 ## Генерация статического файла документации docs.json
 Файл `docs.json` лежит в корне проекта и соответствует схеме, которую отдаёт `GET /openapi.json`. Для обновления спецификации выполните:
@@ -91,7 +81,7 @@ curl http://localhost:8000/openapi.json -o docs.json
 
 ## Фронтенд (необязательно)
 
-По заданию фронтенд не требуется, поэтому сервис `frontend` в `docker-compose.yml` объявлен за **compose-профилем** и обычной командой `docker compose up --build` **не поднимается**. Бэкенд при этом остаётся ровно таким, как описан в ТЗ, и никаких правок в нём для фронтенда не потребовалось.
+По заданию фронтенд не требуется, поэтому сервис `frontend` в `docker-compose.yml` объявлен за **compose-профилем** и обычной командой `docker compose up --build` **не поднимается**. Бэкенд при этом остаётся ровно таким, как в описании
 
 Включить интерфейс:
 ```bash
