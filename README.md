@@ -39,7 +39,7 @@ search-service/
 Документация : curl http://localhost:8000/openapi.json -o docs.json
 
 
-# Search Service
+# Doc-Search
 
 Модульный асинхронный сервис полнотекстового поиска по текстам документов с использованием **FastAPI**, **PostgreSQL** и **Elasticsearch**.
 
@@ -113,10 +113,6 @@ docker compose --profile frontend stop frontend
 ```
 
 Что умеет UI: поиск по тексту документа, выдача с карточками (дата создания, id, рубрики, текст с обрезкой и раскрытием), удаление документа прямо из выдачи, состояния загрузки/ошибки/пустого результата.
-
-Почему не нужен CORS: `vite.config.js` проксирует `/search` и `/document` на адрес из переменной `VITE_API_PROXY` (в compose — `http://web:8000`, при локальном запуске — `http://localhost:8000`). Запросы уходят с того же origin, поэтому бэкенд открытым не делается.
-
-Локальная разработка фронтенда без Docker (бэкенд при этом уже должен работать на :8000):
 ```bash
 cd frontend
 npm install
