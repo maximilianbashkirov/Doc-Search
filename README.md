@@ -74,7 +74,7 @@ search-service/
 docker exec -it search_api pytest tests/
 ```
 
-В наборе есть регрессионные тесты на русскую морфологию (`test_search_russian_morphology`) и на латинские омоглифы в словах (`test_search_latin_homoglyphs`)
+В директории лежат тесты на русскую морфологию (`test_search_russian_morphology`) и на латинские омоглифы в словах (`test_search_latin_homoglyphs`)
 
 ## Генерация статического файла документации docs.json
 Файл `docs.json` лежит в корне проекта и соответствует схеме, которую отдаёт `GET /openapi.json`. Для обновления спецификации выполните:
