@@ -35,8 +35,7 @@ search-service/
 ├── requirements.txt
 ├── docs.json              # спецификация OpenAPI
 └── README.md              # Подробный гайд по развертыванию
-```
-Документация : curl http://localhost:8000/openapi.json -o docs.json
+```
 
 
 # Doc-Search
