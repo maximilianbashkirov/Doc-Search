@@ -60,7 +60,7 @@ search-service/
    ```bash
    docker-compose up --build
    ```
-3. Docker автоматически дождется полной готовности и прохождения healthcheck-проверок со стороны PostgreSQL и Elasticsearch. После этого автоматически отработает скрипт миграций и импорта CSV `app/scripts/init_db.py`, а затем запустится веб-сервер.
+3. Docker автоматически дождется полной готовности и прохождения проверок со стороны PostgreSQL и Elasticsearch. После этого автоматически отработает скрипт миграций и импорта CSV `app/scripts/init_db.py`, а затем запустится веб-сервер.
 
 Сервис будет доступен по адресу: [http://localhost:8000](http://localhost:8000)
 Интерактивная документация Swagger (OpenAPI): [http://localhost:8000/docs](http://localhost:8000/docs)
