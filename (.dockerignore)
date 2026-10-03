@@ -1,0 +1,13 @@
+# Фронтенд собирается отдельным контекстом (./frontend) и в образ бэкенда не нужен
+frontend/
+
+# Служебный мусор Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Прочее
+.git/
+.idea/
+.vscode/
+*.md
