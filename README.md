@@ -68,6 +68,10 @@ search-service/
 Сервис будет доступен по адресу: [http://localhost:8000](http://localhost:8000)
 Интерактивная документация Swagger (OpenAPI): [http://localhost:8000/docs](http://localhost:8000/docs)
 
+## Запуск на домашнем сервере/homelab. 
+
+Руководство как запускать на Proxmox VE (как я запускал): https://docs.google.com/document/d/11tuh9Wu8nb12x6plidSim3caMQW71CYLMZZHqQhQDOQ/edit?usp=drivesdk 
+
 ## Запуск тестов
 Чтобы запустить функциональный тест-пакет внутри поднятого контейнера приложения, выполните команду:
 ```bash
